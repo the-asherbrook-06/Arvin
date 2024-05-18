@@ -1,7 +1,7 @@
 let systemWindowPopout = 0;
 let systemWindowMinimize = 0;
 
-// About Window
+// System Window
 const systemOption = document.querySelector('#icon-dropdown .system');
 const closeSystemOption = document.querySelector('#preferences .action-bar .close');
 const minimizeSystemOption = document.querySelector('#preferences .action-bar .minimize');
@@ -21,7 +21,7 @@ systemOption.addEventListener('click', () => {
         restore(systemWindow);
         close(systemWindow);
         systemWindowPopout = 0;     
-        aboutWindowMinimize = 0;   
+        systemWindowMinimize = 0;   
     }
 });
 
