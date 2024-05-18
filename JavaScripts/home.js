@@ -54,33 +54,48 @@ document.addEventListener('keydown', function(event) {
 });     
 
 maximizeHomeOption.addEventListener('click', () => {
-    if(homeWindowMaximize == 0)
+    if( homeWindowMaximize == 0 )
     {
+        if( homeWindowMinimize == 1)
+        {
+            restoreHome(homeWindow);
+            homeWindowMinimize = 0;
+        }
         maximizeHome(homeWindow);
         homeWindowMaximize = 1;
     }
     else
     {
-        restoreHome(homeWindow);
-        homeWindowMaximize = 0;
+        if(homeWindowMinimize == 0)
+        {
+            restoreHome(homeWindow);
+            homeWindowMaximize = 0;
+        }
+        else if(homeWindowMinimize == 1)
+        {
+            restoreHome(homeWindow);
+            maximizeHome(homeWindow);
+        }
     }
 });
 
 minimizeHomeOption.addEventListener('click', () => {
-    if(homeWindowMinimize == 0)
-    {
-        minimizeHome(homeWindow);
-        homeWindowMinimize = 1;
-    }
-    else if(homeWindowMinimize == 1 && homeWindowMaximize == 1)
+    if( homeWindowMaximize == 1 && homeWindowMinimize == 1)
     {
         restoreHome(homeWindow);
         maximizeHome(homeWindow);
         homeWindowMinimize = 0;
     }
-    else
+    else if( homeWindowMaximize == 0 && homeWindowMinimize == 1 )
     {
         restoreHome(homeWindow);
         homeWindowMinimize = 0;
+    }
+    else
+    {
+        if(homeWindowMaximize == 1)
+            restoreHome(homeWindow);
+        minimizeHome(homeWindow);
+        homeWindowMinimize = 1;
     }
 });
