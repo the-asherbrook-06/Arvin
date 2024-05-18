@@ -42,7 +42,7 @@ closeAboutOption.addEventListener('click', () => {
 minimizeAboutOption.addEventListener('click', () => {
     if(aboutWindowMinimize == 0)
     {
-        minimize(aboutWindow, '95%', '1%', '10%');
+        minimize(aboutWindow, '95vh', '1%', '10%');
         aboutWindowMinimize = 1;
     }
     else

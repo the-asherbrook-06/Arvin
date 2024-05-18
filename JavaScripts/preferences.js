@@ -17,6 +17,7 @@ systemOption.addEventListener('click', () => {
     {
         restore(systemWindow);
         close(systemWindow);
+        systemWindowPopout = 0;        
     }
 });
 
@@ -46,7 +47,7 @@ closeSystemOption.addEventListener('click', () => {
 minimizeSystemOption.addEventListener('click', () => {
     if(systemWindowMinimize == 0)
     {
-        minimize(systemWindow, '96%', '13%', '15%');
+        minimize(systemWindow, '96vh', '13%', '15%');
         systemWindowMinimize = 1;
     }
     else
