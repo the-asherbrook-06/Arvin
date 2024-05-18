@@ -40,7 +40,7 @@
     /* Menu Popout Items */
     --popout-content-width: 150px;
     --popout-shortcut-width: 60px;
-    --popout-shortcut-color: rgb(0, 122, 255, 0.7);
+    --popout-shortcut-color: rgba(61, 155, 255, 0.904);
     --divider-margin: 5px;
     --popout-hover-background-color: rgb(0, 122, 255, 0.2);
 
@@ -52,9 +52,9 @@
     --window-padding: 10px;
     --window-blur: 20px;
 
-    /* Main Window */
-    --main-window-width: 1800px;
-    --main-window-height: 800px;
+    /* Home Window */
+    --home-window-width: 1000px;
+    --home-window-height: 700px;
 }
 
 body { height: 100%; width: 100%; background-image: var(--background-image); background-position: center; background-size: cover;}
@@ -132,6 +132,7 @@ body { height: 100%; width: 100%; background-image: var(--background-image); bac
     height: var(--window-height); width: var(--window-width); padding: var(--window-padding);
     display: none; grid-template-rows: 5% 95%; gap: 3px;
     transition: all 0.3s ease-in-out;
+    z-index: 1;
 } 
 #about .action-bar { background-color: var(--window-background-color); border-radius: var(--window-border-radius) var(--window-border-radius) 0 0; padding: var(--window-padding); display: flex; backdrop-filter: blur(var(--window-blur));}
 #about .content { background-color: var(--window-background-color); border-radius: 0 0 var(--window-border-radius) var(--window-border-radius); padding: var(--window-padding); backdrop-filter: blur(var(--window-blur)); }
@@ -146,6 +147,7 @@ body { height: 100%; width: 100%; background-image: var(--background-image); bac
     height: var(--window-height); width: var(--window-width);
     display: none; grid-template-rows: 5% 95%; gap: 3px;
     transition: all 0.3s ease;
+    z-index: 1;
 }
 #preferences .action-bar { background-color: var(--window-background-color); border-radius: var(--window-border-radius) var(--window-border-radius) 0 0; padding: var(--window-padding); display: flex; backdrop-filter: blur(var(--window-blur)); }
 #preferences .content { display: grid; grid-template-columns: 1fr 3fr; gap: 1px; }
@@ -163,9 +165,10 @@ body { height: 100%; width: 100%; background-image: var(--background-image); bac
 #home
 {
     position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); 
-    height: var(--main-window-height); width: var(--main-window-width); padding: var(--window-padding);
+    height: var(--home-window-height); width: var(--home-window-width); padding: var(--window-padding);
     display: grid; grid-template-rows: 5% 95%; gap: 3px;
     transition: all 0.3s ease-in-out;
+    z-index: 0;
 } 
 #home .action-bar { background-color: var(--window-background-color); border-radius: var(--window-border-radius) var(--window-border-radius) 0 0; padding: var(--window-padding); display: flex; backdrop-filter: blur(var(--window-blur));}
 #home .content { background-color: var(--window-background-color); border-radius: 0 0 var(--window-border-radius) var(--window-border-radius); padding: var(--window-padding); backdrop-filter: blur(var(--window-blur)); }
