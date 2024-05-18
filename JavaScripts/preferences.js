@@ -9,6 +9,7 @@ const systemWindow = document.getElementById('preferences');
 
 systemOption.addEventListener('click', () => {
     if (systemWindowPopout == 0 && systemWindowMinimize == 0) {
+        restore(systemWindow);
         open(systemWindow);
         systemWindowPopout = 1;
     } 
