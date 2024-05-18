@@ -8,51 +8,37 @@ const minimizeSystemOption = document.querySelector('#preferences .action-bar .m
 const systemWindow = document.getElementById('preferences');
 
 systemOption.addEventListener('click', () => {
-    if (systemWindowPopout == 0) {
-        systemWindow.style.display = 'grid';
+    if (systemWindowPopout == 0) 
+    {
+        open(systemWindow);
         systemWindowPopout = 1;
-    } else {
-        systemWindow.style.top = '50%';
-        systemWindow.style.left = "50%";
-        systemWindow.style.width = "var(--window-width)";
-        systemWindow.style.height = "var(--window-height)";
-        systemWindow.style.transform = 'translateX(-50%) translateY(-50%)';
-        document.querySelector('#preferences .content').style.display = 'grid';
-
-        systemWindow.style.display = 'none';
-        systemWindowPopout = 0;
+    } 
+    else 
+    {
+        restore(systemWindow);
+        close(systemWindow);
     }
 });
 
 document.addEventListener('keydown', function(event) {
     if (event.shiftKey && event.key === 'S') {
         console.log("True");
-        if (systemWindow.style.display === 'none' || systemWindow.style.display === '') {
-            systemWindow.style.display = 'grid';
+        if (systemWindow.style.display === 'none' || systemWindow.style.display === '') 
+        {
+            open(systemWindow);
             systemWindowPopout = 1;
-        } else {
-            systemWindow.style.top = '50%';
-            systemWindow.style.left = "50%";
-            systemWindow.style.width = "var(--window-width)";
-            systemWindow.style.height = "var(--window-height)";
-            systemWindow.style.transform = 'translateX(-50%) translateY(-50%)';
-            document.querySelector('#preferences .content').style.display = 'grid';
-
-            systemWindow.style.display = 'none';
-            systemWindowPopout = 0;
+        } 
+        else 
+        {
+            restore(systemWindow);
+            close(systemWindow);
         }
     }
 });
 
 closeSystemOption.addEventListener('click', () => {
-    systemWindow.style.top = '50%';
-    systemWindow.style.left = "50%";
-    systemWindow.style.width = "var(--window-width)";
-    systemWindow.style.height = "var(--window-height)";
-    systemWindow.style.transform = 'translateX(-50%) translateY(-50%)';
-    document.querySelector('#preferences .content').style.display = 'grid';
-
-    systemWindow.style.display = 'none';
+    restore(systemWindow);
+    close(systemWindow);
     systemWindowPopout = 0;
     systemWindowMinimize = 0;
 });
@@ -60,21 +46,12 @@ closeSystemOption.addEventListener('click', () => {
 minimizeSystemOption.addEventListener('click', () => {
     if(systemWindowMinimize == 0)
     {
-        systemWindow.style.top = '96%';
-        systemWindow.style.left = "18%";
-        systemWindow.style.width = "30%";
-        systemWindow.style.transform = 'translateX(0) translateY(0)';
-        document.querySelector('#preferences .content').style.display = 'none';
+        minimize(systemWindow, '96%', '13%', '15%');
         systemWindowMinimize = 1;
     }
     else
     {
-        systemWindow.style.top = '50%';
-        systemWindow.style.left = "50%";
-        systemWindow.style.width = "var(--window-width)";
-        systemWindow.style.height = "var(--window-height)";
-        systemWindow.style.transform = 'translateX(-50%) translateY(-50%)';
-        document.querySelector('#preferences .content').style.display = 'grid';
+        restore(systemWindow);
         systemWindowMinimize = 0;
     }
 });
