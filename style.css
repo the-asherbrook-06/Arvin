@@ -119,15 +119,31 @@ body { height: 100%; width: 100%; }
 #title-dropdown { position: fixed; top: 5vh; left: 45px; display: none; }
 #menu-dropdown { position: fixed; top: 5vh; left: 107px; display: none; }
 
-.window
+#about
 {
     position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); 
     height: var(--window-height); width: var(--window-width); padding: var(--window-padding);
     display: none; grid-template-rows: 5% 95%; gap: 3px;
     transition: all 0.5s ease;
 } 
-.window .action-bar { background-color: var(--window-background-color); border-radius: var(--window-border-radius) var(--window-border-radius) 0 0; padding: var(--window-padding); display: flex;}
-.window .content { background-color: var(--window-background-color); border-radius: 0 0 var(--window-border-radius) var(--window-border-radius); padding: var(--window-padding); }
+#about .action-bar { background-color: var(--window-background-color); border-radius: var(--window-border-radius) var(--window-border-radius) 0 0; padding: var(--window-padding); display: flex;}
+#about .content { background-color: var(--window-background-color); border-radius: 0 0 var(--window-border-radius) var(--window-border-radius); padding: var(--window-padding); }
+#about .action-bar .icon { margin-right: 5px; display: flex; justify-content: center; align-items: center; }
+#about .action-bar .title { margin-right: 5px; margin-left: 5px; display: flex; justify-content: center; align-items: center; }
 
-.window .action-bar .icon { margin-right: 5px; display: flex; justify-content: center; align-items: center; }
-.window .action-bar .title { margin-right: 5px; margin-left: 5px; display: flex; justify-content: center; align-items: center; }
+
+
+#preferences 
+{
+    position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); 
+    height: var(--window-height); width: var(--window-width);
+    display: none; grid-template-rows: 5% 95%; gap: 3px;
+    transition: all 0.5s ease;
+}
+#preferences .action-bar { background-color: var(--window-background-color); border-radius: var(--window-border-radius) var(--window-border-radius) 0 0; padding: var(--window-padding); display: flex;}
+#preferences .content { display: grid; grid-template-columns: 1fr 3fr; gap: 1px; }
+#preferences .action-bar .icon { margin-right: 5px; display: flex; justify-content: center; align-items: center; }
+#preferences .action-bar .title { margin-right: 5px; margin-left: 5px; display: flex; justify-content: center; align-items: center; }
+
+#preferences .content .group { background-color: var(--window-background-color); padding: var(--window-padding); border-radius: 0 0 0 var(--window-border-radius); }
+#preferences .content .settings { background-color: var(--window-background-color);  padding: var(--window-padding); border-radius: 0 0 var(--window-border-radius) 0; }
