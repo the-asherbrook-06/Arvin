@@ -8,31 +8,36 @@ const minimizeSystemOption = document.querySelector('#preferences .action-bar .m
 const systemWindow = document.getElementById('preferences');
 
 systemOption.addEventListener('click', () => {
-    if (systemWindowPopout == 0) 
-    {
+    if (systemWindowPopout == 0 && systemWindowMinimize == 0) {
         open(systemWindow);
         systemWindowPopout = 1;
     } 
-    else 
+    else if (systemWindowPopout == 1 && systemWindowMinimize == 1)
     {
         restore(systemWindow);
+        systemWindowMinimize = 0;
+    }
+    else {
+        restore(systemWindow);
         close(systemWindow);
-        systemWindowPopout = 0;        
+        systemWindowPopout = 0;     
+        aboutWindowMinimize = 0;   
     }
 });
 
 document.addEventListener('keydown', function(event) {
-    if (event.shiftKey && event.key === 'S') {
-        console.log("True");
-        if (systemWindow.style.display === 'none' || systemWindow.style.display === '') 
-        {
+    if (event.shiftKey && event.key === 'S') {  
+        if (systemWindow.style.display === 'none' || systemWindow.style.display === '') {
             open(systemWindow);
             systemWindowPopout = 1;
-        } 
-        else 
-        {
+        } else if (systemWindowPopout == 1 && systemWindowMinimize == 1){
             restore(systemWindow);
-            close(systemWindow);
+            systemWindowMinimize = 0;
+        } else {
+            restore(systemWindow);
+            close(systemWindow);    
+            systemWindowPopout = 0;
+            systemWindowMinimize = 0;
         }
     }
 });
