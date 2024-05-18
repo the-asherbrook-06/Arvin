@@ -12,6 +12,13 @@ aboutOption.addEventListener('click', () => {
         aboutWindow.style.display = 'grid';
         aboutWindowPopout = 1;
     } else {
+        aboutWindow.style.top = '50%';
+        aboutWindow.style.left = "50%";
+        aboutWindow.style.width = "var(--window-width)";
+        aboutWindow.style.height = "var(--window-height)";
+        aboutWindow.style.transform = 'translateX(-50%) translateY(-50%)';
+        document.querySelector('#about .content').style.display = 'grid';
+
         aboutWindow.style.display = 'none';
         aboutWindowPopout = 0;
     }
@@ -24,6 +31,13 @@ document.addEventListener('keydown', function(event) {
             myDiv.style.display = 'grid';
             aboutWindowPopout = 1;
         } else {
+            aboutWindow.style.top = '50%';
+            aboutWindow.style.left = "50%";
+            aboutWindow.style.width = "var(--window-width)";
+            aboutWindow.style.height = "var(--window-height)";
+            aboutWindow.style.transform = 'translateX(-50%) translateY(-50%)';
+            document.querySelector('#about .content').style.display = 'grid';
+
             myDiv.style.display = 'none';
             aboutWindowPopout = 0;
         }
