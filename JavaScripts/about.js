@@ -26,7 +26,7 @@ aboutOption.addEventListener('click', () => {
 });
 
 document.addEventListener('keydown', function(event) {
-    if (event.altKey && event.key === '1') {
+    if (event.shiftKey && event.key === 'A') {
         if (aboutWindow.style.display === 'none' || aboutWindow.style.display === '') {
             open(aboutWindow);
             aboutWindowPopout = 1;

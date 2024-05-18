@@ -38,7 +38,7 @@ homeOption.addEventListener('click', () => {
 
 document.addEventListener('keydown', function(event) {
 
-    if (event.altKey && event.key == '3') {
+    if (event.shiftKey && event.key == 'H') {
         if(homeWindowMinimize == 1 && homeWindowMaximize == 0)
         {
             restoreHome(homeWindow);

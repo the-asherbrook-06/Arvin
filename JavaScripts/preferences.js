@@ -27,7 +27,7 @@ systemOption.addEventListener('click', () => {
 });
 
 document.addEventListener('keydown', function(event) {
-    if (event.altKey && event.key === '2') {  
+    if (event.shiftKey && event.key === 'S') {  
         if (systemWindow.style.display === 'none' || systemWindow.style.display === '') {
             open(systemWindow);
             systemWindowPopout = 1;
