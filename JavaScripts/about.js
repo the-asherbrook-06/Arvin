@@ -2,6 +2,7 @@ let aboutWindowPopout = 0;
 
 // About Window
 const aboutOption = document.querySelector('#icon-dropdown .about');
+const closeAboutOption = document.querySelector('#about .action-bar .close');
 const aboutWindow = document.getElementById('about');
 
 aboutOption.addEventListener('click', () => {
@@ -25,4 +26,9 @@ document.addEventListener('keydown', function(event) {
             aboutWindowPopout = 0;
         }
     }
+});
+
+closeAboutOption.addEventListener('click', () => {
+    aboutWindow.style.display = 'none';
+    aboutWindowPopout = 0;
 });
