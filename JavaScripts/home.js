@@ -19,21 +19,6 @@ homeOption.addEventListener('click', () => {
         maximizeHome(homeWindow);
         homeWindowMinimize = 0;
     }
-    // if (homeWindowPopout == 0 && homeWindowMinimize == 0) {
-    //     open(homeWindow);
-    //     homeWindowPopout = 1;
-    // } 
-    // else if (homeWindowPopout == 1 && homeWindowMinimize == 1)
-    // {
-    //     restore(homeWindow);
-    //     homeWindowMinimize = 0;
-    // }
-    // else {
-    //     restore(homeWindow);
-    //     close(homeWindow);
-    //     homeWindowPopout = 0;
-    //     homeWindowMinimize = 0;
-    // }
 });
 
 document.addEventListener('keydown', function(event) {

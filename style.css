@@ -52,6 +52,12 @@
     --window-padding: 10px;
     --window-blur: 20px;
 
+    /* Preferences Window */
+    --preferences-title-padding: 15px;
+    --preferences-content-padding: 10px 15px;
+    --preferences-label-margin: 10px;
+    --preferences-content-margin: 10px;
+
     /* Home Window */
     --home-window-width: 1000px;
     --home-window-height: 700px;
@@ -161,6 +167,14 @@ body { height: 100%; width: 100%; background-image: var(--background-image); bac
 #preferences .content .group .item:hover { background-color: var(--accent-color); }
 #preferences .content .group .item:active { background-color: var(--active-color); }
 
+
+#preferences .content .settings .title { padding: var(--preferences-title-padding); width: 100%; font-size: larger;}
+#preferences .content .settings hr { border-bottom: 1px gray solid; margin-bottom: 5%; }
+#preferences .content .settings .item { padding: var(--preferences-content-padding); }
+
+#preferences .content .settings .accent { display: flex; flex-direction: row; }
+#preferences .content .settings .accent .label { margin-right: var(--preferences-label-margin); }
+#preferences .content .settings .accent .color { margin-left: var(--preferences-content-margin  );}
 
 #home
 {
