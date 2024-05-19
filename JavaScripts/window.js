@@ -10,7 +10,7 @@ function restore(window)
 
 function minimize(window, top, left, width)
 {
-    window.style.top = top;
+    window.style.top = '96.5vh';
     window.style.left = left;
     window.style.width = width;
     window.style.transform = 'translateX(0) translateY(0)';
@@ -40,7 +40,7 @@ function restoreHome(window)
 function maximizeHome(window)
 {
     window.style.top = '4.6vh';
-    window.style.left = '0';
+    window.style.left = '0.5vw';
     window.style.width = '99vw';
     window.style.height = "93vh";
     window.style.transform = 'translateX(0) translateY(0)';
@@ -48,7 +48,7 @@ function maximizeHome(window)
 
 function minimizeHome(window)
 {
-    window.style.top = '94.8vh';
+    window.style.top = '96.5vh';
     window.style.left = '29%';
     window.style.width = '10%';
     window.style.transform = 'translateX(0) translateY(0)';

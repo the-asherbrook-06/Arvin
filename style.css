@@ -135,9 +135,9 @@ body { height: 100%; width: 100%; background-image: var(--background-image); bac
 #about
 {
     position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); 
-    height: var(--window-height); width: var(--window-width); padding: var(--window-padding);
+    height: var(--window-height); width: var(--window-width);
     display: none; grid-template-rows: 5% 95%; gap: 3px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
     z-index: 1;
 } 
 #about .action-bar { background-color: var(--window-background-color); border-radius: var(--window-border-radius) var(--window-border-radius) 0 0; padding: var(--window-padding); display: flex; backdrop-filter: blur(var(--window-blur));}
@@ -183,9 +183,9 @@ body { height: 100%; width: 100%; background-image: var(--background-image); bac
 #home
 {
     position: fixed; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); 
-    height: var(--home-window-height); width: var(--home-window-width); padding: var(--window-padding);
+    height: var(--home-window-height); width: var(--home-window-width);
     display: grid; grid-template-rows: 5% 95%; gap: 3px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
     z-index: 0;
 } 
 #home .action-bar { background-color: var(--window-background-color); border-radius: var(--window-border-radius) var(--window-border-radius) 0 0; padding: var(--window-padding); display: flex; backdrop-filter: blur(var(--window-blur));}
