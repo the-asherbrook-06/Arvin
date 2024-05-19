@@ -167,6 +167,7 @@ body { height: 100%; width: 100%; background-image: var(--background-image); bac
 #preferences .content .group .item:hover { background-color: var(--accent-color); }
 #preferences .content .group .item:active { background-color: var(--active-color); }
 
+#preferences .content .group .active { background-color: var(--active-color); }
 
 #preferences .content .settings .title { padding: var(--preferences-title-padding); width: 100%; font-size: larger;}
 #preferences .content .settings hr { border-bottom: 1px gray solid; margin-bottom: 5%; }
