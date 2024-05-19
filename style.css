@@ -7,14 +7,14 @@
     --background-blur: 10px;
     --accent-color: rgb(0, 122, 255, 0.4);
     --active-color: rgb(0, 122, 255, 0.7);
-    --hover-color: rgb(142, 142, 147, 0.5);
+    --hover-color: rgba(137, 137, 137, 0.7);
     --link-color: ;
 
     /* Nav bar */
     --navbar-height: 3.2vh;
     --navbar-padding: 0.5vh;
     --navbar-margin: ;
-    --nav-background-color: rgba(0, 0, 0, 0.3);
+    --nav-background-color: rgba(137, 137, 137, 0.3);
 
     /* Nav bar left */
     --navbar-left-border-radius: 6px;
@@ -29,7 +29,7 @@
     --navbar-right-clock-width: 56px;
 
     /* Menu Popouts*/
-    --popout-background-color: rgba(0, 0, 0, 0.3);
+    --popout-background-color: rgba(137, 137, 137, 0.3);
     --popout-background-blur: 10px;
     --popout-border-radius: 6px;
     --popout-width: 240px;
@@ -47,7 +47,8 @@
     /* Window Popouts */
     --window-width: 700px;
     --window-height: 700px;
-    --window-background-color: rgba(0, 0, 0, 0.3);
+    --window-background-color: rgba(137, 137, 137, 0.3);
+    --window-divider-color: rgba(103, 103, 103, 0.3);
     --window-border-radius: 10px;
     --window-padding: 10px;
     --window-blur: 20px;
@@ -174,11 +175,11 @@ body { height: 100%; width: 100%; background-image: var(--background-image); bac
 
 
 #preferences .content .settings .title { padding: var(--preferences-title-padding); width: 100%; font-size: larger;}
-#preferences .content .settings hr { border-bottom: 1px gray solid; margin-bottom: 5%; }
-#preferences .content .settings .item { padding: var(--preferences-content-padding); }
-#preferences .content .settings .accent { display: flex; flex-direction: row; }
-#preferences .content .settings .accent .label { margin-right: var(--preferences-label-margin); }
-#preferences .content .settings .accent .color { margin-left: var(--preferences-content-margin); }
+#preferences .content .settings hr { border-bottom: 1px var(--window-divider-color) solid; margin-bottom: 5%; }
+#preferences .content .settings .item { padding: var(--preferences-content-padding); display: flex; flex-direction: row; }
+#preferences .content .settings .item .label { margin-right: var(--preferences-label-margin); }
+#preferences .content .settings .item .theme { margin-left: var(--preferences-content-margin); }
+#preferences .content .settings .item .color { margin-left: var(--preferences-content-margin); }
 
 #home
 {
